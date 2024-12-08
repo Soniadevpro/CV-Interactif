@@ -1,68 +1,54 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-
-
-/* Tes propres styles */
+/* Styles globaux */
 body {
   background-color: rgb(243, 235, 213);
   margin: 80px;
   border: #9d174d 10px solid;
 }
- .photo {
+
+.photo {
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  border: #9d174d 6px solid ;
+  border: #9d174d 6px solid;
   display: flex;
   justify-content: center;
 }
-
 
 .position-rezo {
   display: flex;
   justify-content: center;
-
 }
 
-
-.logo-github {
-  width: 50px;
-  height: 100px;
-
-}
-
+.logo-github,
 .logo-linkedin {
   width: 50px;
   height: 100px;
-
 }
 
 h1 {
   color: #9d174d;
-  font-size: 2em;
-  text-align: start;
   font-family: "Mogra", system-ui;
   font-weight: 200;
   font-size: 54px;
 }
 
 p {
- 
   font-size: 17px;
   text-align: start;
   margin: 15px;
 }
+
 ul li {
   list-style-type: square;
- text-align: start;
+  text-align: start;
   margin: 15px;
 }
+
 h2 {
- 
-  font-size: 1.5em;
-  text-align: start;
   border-bottom: #9d174d 1px solid;
   text-align: center;
   font-family: "Mogra", system-ui;
@@ -70,53 +56,40 @@ h2 {
   font-size: 28px;
   color: #9d174d;
   margin: 50px;
-} 
+}
+
 h3 {
- 
-  font-size: 1.2em;
-  text-align: start;
-  font-weight: bolder;
-  margin: 15px;
-  
   font-family: "Mogra", system-ui;
   font-weight: 200;
   font-size: 22px;
-
+  margin: 15px;
 }
 
 .techno {
   display: flex;
-      justify-content: center;
-      gap: 20px;
-  
-      flex-direction: column;
-      align-items: center;
-  }
-
-
-
-.download  {
-
-display: flex;
-justify-content: center;
-margin: 20px;
-
-}
-.button {
-
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
+.download {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 
-
-
+.position-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .position-card {
   display: flex;
   flex-direction: row;
-gap: 20px;
-
-
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -162,15 +135,6 @@ gap: 20px;
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -181,4 +145,62 @@ gap: 20px;
   opacity: 1;
   transform: translateY(0);
 }
-/*# sourceMappingURL=style.css.map */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  body {
+    margin: 20px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  h2, h3 {
+    font-size: 1.25rem;
+    margin: 20px;
+  }
+
+  .position-rezo,
+  .techno {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .download {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2, h3 {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .position-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
