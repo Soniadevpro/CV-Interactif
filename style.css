@@ -3,11 +3,22 @@
 @tailwind utilities; */
 
 /* Styles globaux */
+
+
+
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(243, 235, 213);
   margin: 80px;
   border: #9d174d 10px solid;
 }
+/* .container-1, .container-2 {
+  max-width: 100%;
+  overflow-x: hidden;
+} */
+
 
 .photo {
   width: 200px;
@@ -21,8 +32,16 @@ body {
 .position-rezo {
   display: flex;
   justify-content: center;
+  text-decoration: underline;
+  color: #9d174d;
 }
-
+.position-rezo a {
+ color: #9d174d;
+}
+.mailto {
+  color: #9d174d;
+  text-decoration: underline;
+}
 .logo-github,
 .logo-linkedin {
   width: 50px;
@@ -32,6 +51,8 @@ body {
   width: 50px;
   height: 50px;
 }
+
+
 h1 {
   color: #9d174d;
   font-family: "Mogra", system-ui;
@@ -67,7 +88,24 @@ h3 {
   font-size: 22px;
   margin: 15px;
 }
+.container-2 {
 
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+#typewriter {
+  font-family: "Mogra", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 3em); /* Adapte la taille en fonction de l'écran */
+  text-align: center;
+  /* margin: 20px auto; Centre et réduit la marge */
+  word-wrap: break-word; /* Permet d'éviter le débordement */
+  /* white-space: pre-wrap; Gère correctement les retours à la ligne
+  overflow-wrap: break-word; Coupe les mots si nécessaire */
+  max-width: 90%; /* Empêche l'élément de dépasser l'écran */
+  padding: 20px;
+}
 .techno {
   display: flex;
   flex-direction: column;
@@ -90,15 +128,13 @@ h3 {
 
 .position-card {
   display: flex;
-  flex-direction: row;
   gap: 20px;
   justify-content: center;
 }
 
 .card {
-  width: 200px;
-  height: 200px;
-  perspective: 1000px;
+  width: 120px;
+  height: 150px;
 }
 
 .card-inner {
@@ -154,7 +190,9 @@ h3 {
   body {
     margin: 20px;
   }
-
+  .position-rezo {
+    align-items: center;
+   }
   .grid {
     display: flex;
     flex-direction: column;
@@ -200,11 +238,17 @@ h3 {
   .position-card {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+  }
+
+  .position-rezo {
+   align-items: center;
   }
 
   .card {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
+
 }
 

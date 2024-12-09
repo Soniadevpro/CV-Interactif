@@ -31,19 +31,23 @@ function typeWriter() {
 
   if (index < text.length) {
     element.textContent += text.charAt(index);
-    element.style.fontFamily = "Mogra";
-    element.style.fontSize = "3em";
-    element.style.textAlign = "center";
-    element.style.margin = "50px";
     index++;
+
+    // Ajuste dynamiquement la taille selon la largeur
+    if (window.innerWidth < 768) {
+      element.style.fontSize = "2rem"; // Pour petits écrans
+    } else {
+      element.style.fontSize = "3em"; // Pour écrans plus grands
+    }
+
     setTimeout(typeWriter, speed);
   } else {
     setTimeout(() => {
       index = 0;
       textIndex = (textIndex + 1) % texts.length; // Passe au texte suivant
-      element.textContent = ""; // Efface l'élément avant d'écrire le prochain texte
+      element.textContent = ""; // Réinitialise avant de recommencer
       typeWriter();
-    }, pause); // Attend avant de redémarrer
+    }, pause);
   }
 }
 
