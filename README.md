@@ -26,3 +26,7 @@ ________________________________________
 
 
 lien de téléchargement du cv 
+
+
+<h3>Déployé avec Netlify</h3>
+https://cv-interactif-soniadevpro.netlify.app/
